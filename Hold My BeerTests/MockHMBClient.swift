@@ -10,12 +10,9 @@ import Foundation
 import class UIKit.UIImage
 
 final class MockHMBClent: HMBClientProtocol {
-    let beers = [Beer]()
-    func getBeers(completion: @escaping (Result<[GetBeersResponse]?, HMBClientErrors>) -> Void) {
-        return completion(.success([.fake()]))
-    }
+    let fakeResponse:[GetBeersResponse] = [.fake()]
     
-    func requestImageFile(url: URL, completion: @escaping (Result<UIImage?, HMBClientErrors>) -> Void) {
-        
+    func getBeers(completion: @escaping (Result<[GetBeersResponse]?, HMBClientErrors>) -> Void) {
+        return completion(.success(fakeResponse))
     }
 }
