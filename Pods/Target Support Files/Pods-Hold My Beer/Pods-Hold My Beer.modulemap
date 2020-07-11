@@ -1,0 +1,6 @@
+framework module Pods_Hold_My_Beer {
+  umbrella header "Pods-Hold My Beer-umbrella.h"
+
+  export *
+  module * { export * }
+}
