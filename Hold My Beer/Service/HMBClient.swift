@@ -13,7 +13,7 @@ final class HMBClient: HMBClientProtocol {
     enum Endpoints {
         static let baseURL = "https://api.punkapi.com/v2/"
         case getBeers
-        case gerBeerDetail(String)
+        case getBeerDetail(Int)
         var url: URL {
             return URL(string: self.stringValue)!
         }
@@ -22,8 +22,8 @@ final class HMBClient: HMBClientProtocol {
             switch self {
             case .getBeers:
                 return Endpoints.baseURL + "/beers"
-            case .gerBeerDetail(let id):
-                return Endpoints.baseURL + "/beers/" + id
+            case .getBeerDetail(let id):
+                return Endpoints.baseURL + "/beers/\(id)"
             }
         }
     }
