@@ -12,6 +12,8 @@
 		7709B14B24B9E1E3004AEE9E /* BeerDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709B14A24B9E1E3004AEE9E /* BeerDetailsTest.swift */; };
 		770CB84A24B8C97200B648D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CB84924B8C97200B648D7 /* SceneDelegate.swift */; };
 		770CB84C24B8CC7400B648D7 /* BeerListListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770CB84B24B8CC7400B648D7 /* BeerListListViewModel.swift */; };
+		7719ACAC24BC44E8009AE910 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719ACAB24BC44E8009AE910 /* DependencyContainer.swift */; };
+		7719ACAF24BC4842009AE910 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719ACAE24BC4842009AE910 /* Weak.swift */; };
 		7719BBF424B8F25600F0B1DA /* BeerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719BBF324B8F25600F0B1DA /* BeerDetailsViewModel.swift */; };
 		7719BBF624B8F26200F0B1DA /* BeerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719BBF524B8F26200F0B1DA /* BeerDetailsViewController.swift */; };
 		7723186F24B8CD9000362A8A /* HMBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7723186E24B8CD9000362A8A /* HMBClient.swift */; };
@@ -25,6 +27,7 @@
 		7769305A24B8D34C000C9B8B /* BeerPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7769305924B8D34C000C9B8B /* BeerPresentation.swift */; };
 		7769305C24B8D39E000C9B8B /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7769305B24B8D39E000C9B8B /* BeerListViewController.swift */; };
 		7769305E24B8D87D000C9B8B /* BeerListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7769305D24B8D87D000C9B8B /* BeerListBuilder.swift */; };
+		7782BD1C24BC4ABD009F0BBB /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7782BD1B24BC4ABD009F0BBB /* Dependency.swift */; };
 		77FE46E724B8F54500365DB9 /* BeerDetailsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE46E624B8F54500365DB9 /* BeerDetailsContracts.swift */; };
 		77FE46F824B8F87500365DB9 /* BeerListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE46EE24B8F6FC00365DB9 /* BeerListTest.swift */; };
 		77FE46FA24B8F89F00365DB9 /* BeerListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7729F2CF24B8C1080045704D /* BeerListContracts.swift */; };
@@ -61,6 +64,8 @@
 		7709B14A24B9E1E3004AEE9E /* BeerDetailsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsTest.swift; sourceTree = "<group>"; };
 		770CB84924B8C97200B648D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		770CB84B24B8CC7400B648D7 /* BeerListListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListListViewModel.swift; sourceTree = "<group>"; };
+		7719ACAB24BC44E8009AE910 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		7719ACAE24BC4842009AE910 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		7719BBF324B8F25600F0B1DA /* BeerDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsViewModel.swift; sourceTree = "<group>"; };
 		7719BBF524B8F26200F0B1DA /* BeerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsViewController.swift; sourceTree = "<group>"; };
 		7723186E24B8CD9000362A8A /* HMBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMBClient.swift; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		7769305924B8D34C000C9B8B /* BeerPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerPresentation.swift; sourceTree = "<group>"; };
 		7769305B24B8D39E000C9B8B /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		7769305D24B8D87D000C9B8B /* BeerListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListBuilder.swift; sourceTree = "<group>"; };
+		7782BD1B24BC4ABD009F0BBB /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		77FE46E624B8F54500365DB9 /* BeerDetailsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsContracts.swift; sourceTree = "<group>"; };
 		77FE46EC24B8F6FC00365DB9 /* Hold My BeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hold My BeerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FE46EE24B8F6FC00365DB9 /* BeerListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTest.swift; sourceTree = "<group>"; };
@@ -133,6 +139,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7719ACAD24BC4835009AE910 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				7719ACAB24BC44E8009AE910 /* DependencyContainer.swift */,
+				7719ACAE24BC4842009AE910 /* Weak.swift */,
+				7782BD1B24BC4ABD009F0BBB /* Dependency.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		7723186D24B8CD7300362A8A /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +182,7 @@
 		7729F2B624B8C0690045704D /* Hold My Beer */ = {
 			isa = PBXGroup;
 			children = (
+				7719ACAD24BC4835009AE910 /* Dependencies */,
 				77FE470B24B9BAA100365DB9 /* Extentions */,
 				7723186D24B8CD7300362A8A /* Service */,
 				7729F2CC24B8C08C0045704D /* Scene */,
@@ -391,9 +408,11 @@
 			files = (
 				7719BBF624B8F26200F0B1DA /* BeerDetailsViewController.swift in Sources */,
 				7729F2D024B8C1080045704D /* BeerListContracts.swift in Sources */,
+				7719ACAF24BC4842009AE910 /* Weak.swift in Sources */,
 				770CB84C24B8CC7400B648D7 /* BeerListListViewModel.swift in Sources */,
 				7729F2B824B8C0690045704D /* AppDelegate.swift in Sources */,
 				77FE470A24B9AF7300365DB9 /* BeerDetailsBuilder.swift in Sources */,
+				7782BD1C24BC4ABD009F0BBB /* Dependency.swift in Sources */,
 				7729F2D224B8C1770045704D /* AppRouter.swift in Sources */,
 				77FE46FC24B8F8FF00365DB9 /* HMBServiceContracts.swift in Sources */,
 				7769305824B8D03C000C9B8B /* HMBResponse.swift in Sources */,
@@ -405,6 +424,7 @@
 				7769305C24B8D39E000C9B8B /* BeerListViewController.swift in Sources */,
 				7719BBF424B8F25600F0B1DA /* BeerDetailsViewModel.swift in Sources */,
 				77FE46E724B8F54500365DB9 /* BeerDetailsContracts.swift in Sources */,
+				7719ACAC24BC44E8009AE910 /* DependencyContainer.swift in Sources */,
 				7723186F24B8CD9000362A8A /* HMBClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

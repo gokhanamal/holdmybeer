@@ -11,13 +11,9 @@ import Foundation
 
 final class BeerListViewModel: BeerListViewModelProtocol {
     var delegate: BeerListViewModelDelegate?
-    private let client: HMBClientProtocol
+    @Dependency var client: HMBClientProtocol
     
     var beers = [Beer]()
-    
-    init(client: HMBClientProtocol) {
-        self.client = client
-    }
     
     func load() {
         delegate?.handleViewModelOutput(.setTitle("Beers"))
@@ -42,8 +38,9 @@ final class BeerListViewModel: BeerListViewModelProtocol {
     
     func selectBeer(at index: Int) {
         let beer = beers[index]
-        let viewModel = BeerDetailsViewModel(beer: beer)
-        delegate?.navigate(to: .details(viewModel))
+        let viewModel: BeerDetailsViewModelProtocol = BeerDetailsViewModel(beer: beer)
+        DependencyContainer.register(viewModel)
+        delegate?.navigate(to: .details)
     }
 }
 

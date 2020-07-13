@@ -27,7 +27,7 @@ protocol BeerListViewModelDelegate {
 }
 
 enum NavigationType {
-    case details(BeerDetailsViewModelProtocol)
+    case details
 }
 
 extension BeerListViewModelOutput {

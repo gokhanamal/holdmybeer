@@ -11,9 +11,15 @@ import UIKit
 final class BeerListBuilder {
     static func make() -> BeerListViewController {
         let storyboard = UIStoryboard(name: "BeerList", bundle: .main)
+        let client: HMBClientProtocol = HMBClient()
+        DependencyContainer.register(client)
+
+        let viewModel: BeerListViewModelProtocol = BeerListViewModel()
+
+        DependencyContainer.register(viewModel)
+
         let viewController = storyboard.instantiateInitialViewController() as!  BeerListViewController
-        let client = HMBClient()
-        viewController.viewModel = BeerListViewModel(client: client)
+
         return viewController
     }
 }

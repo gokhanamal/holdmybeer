@@ -10,10 +10,9 @@ import Foundation
 import class UIKit.UIStoryboard
 
 final class BeerDetailsBuilder {
-    static func make(with viewModel: BeerDetailsViewModelProtocol) -> BeerDetailsViewController {
+    static func make() -> BeerDetailsViewController {
         let storyboard = UIStoryboard(name: "BeerDetails", bundle: .main)
         let viewController = storyboard.instantiateInitialViewController() as! BeerDetailsViewController
-        viewController.viewModel = viewModel
         return viewController
     }
 }

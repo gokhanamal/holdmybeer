@@ -11,15 +11,12 @@ import SVProgressHUD
 final class BeerListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var beers = [Beer]()
-    var viewModel: BeerListViewModelProtocol! {
-       didSet {
-           viewModel.delegate = self
-       }
-   }
-
+    @Dependency var viewModel: BeerListViewModelProtocol
+    
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
+        viewModel.delegate = self
         viewModel.load()
     }
 }
@@ -42,8 +39,8 @@ extension BeerListViewController: BeerListViewModelDelegate {
     
     func navigate(to navigationType: NavigationType) {
         switch navigationType {
-        case .details(let viewModel):
-            let viewController = BeerDetailsBuilder.make(with: viewModel)
+        case .details:
+            let viewController = BeerDetailsBuilder.make()
             show(viewController, sender: nil)
         }
     }
