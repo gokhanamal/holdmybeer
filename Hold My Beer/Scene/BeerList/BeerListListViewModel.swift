@@ -27,7 +27,7 @@ final class BeerListViewModel: BeerListViewModelProtocol {
             guard let self = self else { return }
             switch(response) {
                 case .failure(let error):
-                    print(error)
+                    self.delegate?.handleViewModelOutput(.showError(error))
                     break;
                 case .success(let beersResponse):
                     if let beersResponse = beersResponse {

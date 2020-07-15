@@ -19,6 +19,7 @@ enum BeerListViewModelOutput: Equatable {
     case setTitle(String)
     case setLoading(Bool)
     case showBeerList([Beer])
+    case showError(Error)
 }
 
 protocol BeerListViewModelDelegate {

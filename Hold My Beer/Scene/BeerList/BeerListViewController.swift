@@ -37,6 +37,8 @@ extension BeerListViewController: BeerListViewModelDelegate {
         case .setTitle(let title):
             navigationItem.title = title
             break;
+        case .showError(let error):
+            showAlert(title: "Error!", message: error.localizedDescription, actions: nil)
         }
     }
     
