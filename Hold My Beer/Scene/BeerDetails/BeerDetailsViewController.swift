@@ -13,13 +13,11 @@ final class BeerDetailsViewController: UIViewController {
     @IBOutlet private weak var desclabel: UILabel?
     @IBOutlet private weak var tipsLabel: UILabel?
     
-    var viewModel: BeerDetailsViewModelProtocol? {
-        didSet {
-            viewModel?.delegate = self
-        }
-    }
+    var viewModel: BeerDetailsViewModelProtocol?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel?.delegate = self
         viewModel?.load()
     }
 }

@@ -10,16 +10,15 @@ import UIKit
 import SVProgressHUD
 final class BeerListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    
     var beers = [Beer]()
-    var viewModel: BeerListViewModelProtocol! {
-       didSet {
-           viewModel.delegate = self
-       }
-   }
+    var viewModel: BeerListViewModelProtocol!
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        viewModel.delegate = self
         viewModel.load()
     }
 }
@@ -29,14 +28,11 @@ extension BeerListViewController: BeerListViewModelDelegate {
         switch output {
         case .setLoading(let isLoading):
             isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()
-            break;
         case .showBeerList(let beers):
             self.beers = beers
             tableView.reloadData()
-            break;
         case .setTitle(let title):
             navigationItem.title = title
-            break;
         case .showError(let error):
             showAlert(title: "Error!", message: error.localizedDescription, actions: nil)
         }
@@ -44,7 +40,9 @@ extension BeerListViewController: BeerListViewModelDelegate {
     
     func navigate(to navigationType: NavigationType) {
         switch navigationType {
-        case .details(let viewModel):
+        case .details(let index):
+            let beer = beers[index]
+            let viewModel = BeerDetailsViewModel(beer: beer)
             let viewController = BeerDetailsBuilder.make(with: viewModel)
             show(viewController, sender: nil)
         }
@@ -63,7 +61,6 @@ extension BeerListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = beer.name
         cell.detailTextLabel?.text = beer.tagline
         // Set place holder image
-        
         cell.imageView?.image = UIImage(named: "beer")
         cell.imageView?.contentMode = .scaleAspectFit
         if let url = beer.imageURL {

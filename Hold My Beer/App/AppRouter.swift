@@ -9,7 +9,13 @@
 import UIKit
 
 final class AppRouter {
-    func start(window: UIWindow?) {
+    let window: UIWindow?
+    
+    init(window: UIWindow?) {
+        self.window = window
+    }
+    
+    func start() {
         let rootViewController = BeerListBuilder.make()
         let navigationController = UINavigationController(rootViewController: rootViewController)
         

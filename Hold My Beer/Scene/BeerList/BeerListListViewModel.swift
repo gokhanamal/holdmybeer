@@ -10,10 +10,9 @@
 import Foundation
 
 final class BeerListViewModel: BeerListViewModelProtocol {
-    var delegate: BeerListViewModelDelegate?
-    private let client: HMBClientProtocol
     
-    var beers = [Beer]()
+    weak var delegate: BeerListViewModelDelegate?
+    private let client: HMBClientProtocol
     
     init(client: HMBClientProtocol) {
         self.client = client
@@ -32,7 +31,6 @@ final class BeerListViewModel: BeerListViewModelProtocol {
                 case .success(let beersResponse):
                     if let beersResponse = beersResponse {
                         let beers = beersResponse.map{Beer(beer: $0)}
-                        self.beers = beers
                         self.delegate?.handleViewModelOutput(.showBeerList(beers))
                     }
             }
@@ -41,9 +39,7 @@ final class BeerListViewModel: BeerListViewModelProtocol {
     }
     
     func selectBeer(at index: Int) {
-        let beer = beers[index]
-        let viewModel = BeerDetailsViewModel(beer: beer)
-        delegate?.navigate(to: .details(viewModel))
+        delegate?.navigate(to: .details(index))
     }
 }
 

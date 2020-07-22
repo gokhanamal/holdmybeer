@@ -22,13 +22,13 @@ enum BeerListViewModelOutput: Equatable {
     case showError(Error)
 }
 
-protocol BeerListViewModelDelegate {
+protocol BeerListViewModelDelegate: class {
     func handleViewModelOutput(_ output: BeerListViewModelOutput)
     func navigate(to navigationType: NavigationType)
 }
 
 enum NavigationType {
-    case details(BeerDetailsViewModelProtocol)
+    case details(Int)
 }
 
 extension BeerListViewModelOutput {

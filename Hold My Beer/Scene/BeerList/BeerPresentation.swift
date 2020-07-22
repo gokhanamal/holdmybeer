@@ -25,5 +25,4 @@ struct Beer: Equatable {
     let description: String
     let brewersTips: String
     let imageURL: URL?
-    var image: UIImage?
 }
